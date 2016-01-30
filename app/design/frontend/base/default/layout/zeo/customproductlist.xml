@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+	<customproductlist_index_index>
+
+		<reference name="root">
+			<action method="setTemplate">
+				<template>page/2columns-left.phtml</template>
+			</action>
+		</reference>
+		
+		<reference name="left">
+			<block type="customproductlist/catalog_product_layer_view" name="catalog.leftnav" after="currency" template="catalog/layer/view.phtml">
+				<block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
+			</block>
+		</reference>
+      
+		<reference name="content">
+			<block type="customproductlist/catalog_product_list" name="zeo.new" template="zeo/customproductlist/catalog/product/list.phtml" >
+				<block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
+				<block type="page/html_pager" name="product_list_toolbar_pager"/>
+				</block>
+				<action method="addColumnCountLayoutDepend"><layout>empty</layout><count>6</count></action>
+				<action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>5</count></action>
+				<action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>4</count></action>
+				<action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>4</count></action>
+				<action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
+				<action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+				
+			</block>
+		</reference>
+	</customproductlist_index_index>
+	
+</layout>   

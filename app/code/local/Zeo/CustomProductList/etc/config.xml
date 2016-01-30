@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config>
+	<global>
+		<models>
+			<customproductlist>
+				<class>Zeo_CustomProductList_Model</class>
+			</customproductlist>
+		</models>
+		<blocks>
+			<customproductlist>
+				<class>Zeo_CustomProductList_Block</class>
+			</customproductlist>
+		</blocks>
+		<helpers>
+			<customproductlist>
+				<class>Zeo_CustomProductList_Helper</class>
+			</customproductlist>
+		</helpers>
+	</global>
+	
+	<frontend>
+		<routers>
+			<customproductlist>
+				<use>standard</use>
+				<args>
+					<module>Zeo_CustomProductList</module>
+					<frontName>customproductlist</frontName>
+				</args>
+			</customproductlist>
+		</routers>
+		<layout>
+			<updates>
+				<customproductlist>
+					<file>zeo/customproductlist.xml</file>
+				</customproductlist>
+			</updates>
+		</layout>
+	</frontend>
+</config>
